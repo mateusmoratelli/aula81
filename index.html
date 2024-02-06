@@ -1,0 +1,36 @@
+<html>
+    <link rel="style" type="text/css" href="style.css">
+
+ <script>
+    var imagens = ["eu.jpg", "ale.jpg", "pai.jpg", "maria.jpg", "sky.jpg"] 
+    var nomes = ["eu, joão", "ale, minha mãe", "mateus, meu pai", "maria minha irmã", "e minha cachorrinha, sky"]  
+ 
+    var x = -1;
+    
+
+    function eventoDuplo(){
+    
+        x = x + 1; 
+        if ( x == imagens.length ){
+            x = 0;
+        } 
+
+        document.getElementById('foto').src = "fotos/"  +  imagens[x];
+        document.getElementById('legenda').innerText = nomes[x];
+        
+        console.log("--------------------------------------");
+        console.log(x);
+        console.log(imagens[x]);
+        console.log(nomes[x]);
+
+    }   
+    </script>
+
+    <div>
+            <h1>meu álbum de família</h1>
+        <img id="foto" src="fotos/no_photo.png" height="400" width="400"></img>
+        <h3 id="legenda">Clique no botão para ver as fotos
+        </h3>
+        <button type="button" onclick="eventoDuplo()">Evento</button>
+ </div>
+</html>
